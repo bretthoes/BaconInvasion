@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bacon Invasion</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+</head>
+
+<body>
+    <div id="gamecontainer">
+        <div id="livescontainer">
+        </div>
+        <div id="scorecontainer">
+            Score: <span id="score">0</span>
+        </div>
+        <div id="start">
+            Play!
+        </div>
+    </div>
+    <div id="contentunder">
+        <h2>Bacon Invasion!</h2>
+        <p><strong>Stop the crispy invaders!</strong> Current lives are in the top left, current score is in the top
+            right. Good luck!</p>
+        <h2>Legend:</h2>
+        <table id="legend">
+            <tr>
+                <th>Object</th>
+                <th>Description</th>
+                <th>Icon</th>
+            </tr>
+            <tr>
+                <td>Bacon Warrior</td>
+                <td>Marches at a medium pace, awards 1 point and takes 1 life.</td>
+                <td><img src="img/baconwarrior.png" height="70px" width="70px" /></td>
+            </tr>
+            <tr>
+                <td>Bacon Wizard</td>
+                <td>This crafty sorcerer isn't the fastest, but has the ability to turn invisible.</td>
+                <td><img src="img/baconwizard.png" height="70px" width="70px" /></td>
+            </tr>
+            <tr>
+                <td>Bomb</td>
+                <td>This bomb will move along slowly, but will destroy all your remaining lives if allowed through.</td>
+                <td><img src="img/bomb.png" height="70px" width="70px" /></td>
+            </tr>
+            <tr>
+                <td>Heart</td>
+                <td>This heart will award 1 life when hovered! You will not lose a life if missed.</td>
+                <td><img src="img/heart.png" height="70px" width="70px" /></td>
+            </tr>
+            <tr>
+                <td>???</td>
+                <td>Little is known about this mysterious foe, only that he travels fast and awards 3 points when
+                    stopped.</td>
+                <td>N/A</td>
+            </tr>
+        </table>
+    </div>
+    <div id="gameover" class="modal">
+
+        <div class="modal-content">
+
+            <span class="close" id="close">&times;</span>
+            <h1>Game over!</h1>
+            <img src="img/sky.png" width="80%" height="auto" />
+
+            <p id="gameovermessage">Some text in the Modal..</p>
+            <div class="close" id="ok">
+                Ok
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

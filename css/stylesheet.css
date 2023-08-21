@@ -1,0 +1,194 @@
+html {
+    background-color: lightgray;
+    font-family: fantasy;
+
+    background: rgb(152, 207, 159);
+    background: linear-gradient(90deg, rgba(152, 207, 159, 1) 0%, rgba(166, 241, 193, 1) 35%, rgba(108, 223, 100, 1) 100%);
+    background: -moz-linear-gradient(90deg, rgba(152, 207, 159, 1) 0%, rgba(166, 241, 193, 1) 35%, rgba(108, 223, 100, 1) 100%);
+}
+
+#gamecontainer {
+    min-height: 800px;
+    background-image: url(../img/field.png);
+    position: relative;
+    width: 100%;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: gold;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.object {
+    /*display: none;*/
+    position: absolute;
+}
+
+#gameovermessage {
+    font-size: 2em;
+}
+
+#scorecontainer {
+    padding: 10px;
+    float: right;
+    background-color: red;
+    color: yellow;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#livescontainer {
+    min-width: 140px;
+    width: auto;
+    padding: 5px;
+    margin: 10px;
+    float: left;
+    background-color: rgb(241, 235, 235);
+    border-radius: 9px;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+#start {
+    color: white;
+    background: radial-gradient(circle, rgb(251, 0, 251), rgb(235, 225, 236));
+    background: -webkit-radial-gradient(circle, rgb(251, 0, 251), rgb(235, 225, 236));
+    background: -o-radial-gradient(circle, rgb(251, 0, 251), rgb(235, 225, 236));
+    background: -moz-radial-gradient(circle, rgb(251, 0, 251), rgb(235, 225, 236));
+    border: 4px solid blue;
+    padding: 7px 66px;
+    margin: 0 auto;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 2.5em;
+    width: min-content;
+    font-family: cursive;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#start:hover {
+    color: blue;
+    background: radial-gradient(circle, rgb(169, 157, 223), rgb(123, 75, 128));
+    background: -webkit-radial-gradient(circle, rgb(169, 157, 223), rgb(123, 75, 128));
+    background: -o-radial-gradient(circle, rgb(169, 157, 223), rgb(123, 75, 128));
+    background: -moz-radial-gradient(circle, rgb(169, 157, 223), rgb(123, 75, 128));
+    cursor: pointer;
+    width: min-content;
+}
+
+
+#ok {
+    color: white;
+    background: radial-gradient(circle, rgb(251, 0, 251), rgb(235, 225, 236));
+    background: -webkit-radial-gradient(circle, rgb(251, 0, 251), rgb(235, 225, 236));
+    background: -o-radial-gradient(circle, rgb(251, 0, 251), rgb(235, 225, 236));
+    background: -moz-radial-gradient(circle, rgb(251, 0, 251), rgb(235, 225, 236));
+    border: 4px solid blue;
+    padding: 7px 66px;
+    margin: 0 auto;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 2.5em;
+    width: min-content;
+    font-family: cursive;
+}
+
+#ok:hover {
+    color: blue;
+    background: radial-gradient(circle, rgb(169, 157, 223), rgb(123, 75, 128));
+    background: -webkit-radial-gradient(circle, rgb(169, 157, 223), rgb(123, 75, 128));
+    background: -o-radial-gradient(circle, rgb(169, 157, 223), rgb(123, 75, 128));
+    background: -moz-radial-gradient(circle, rgb(169, 157, 223), rgb(123, 75, 128));
+    cursor: pointer;
+    width: min-content;
+}
+
+.heart {
+    width: 44px;
+    height: 44px;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+#contentunder {
+    text-align: center;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+#legend {
+    text-align: center;
+    margin: auto;
+}
+
+.modal {
+    text-align: center;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    border: 5px solid black;
+    border-radius: 20px;
+    background: rgb(152, 207, 159);
+    background: linear-gradient(90deg, rgba(152, 207, 159, 1) 0%, rgba(255, 255, 255, 1) 35%, rgba(108, 223, 100, 1) 100%);
+    background: -moz-linear-gradient(90deg, rgba(152, 207, 159, 1) 0%, rgba(255, 255, 255, 1) 35%, rgba(108, 223, 100, 1) 100%);
+
+    margin: auto;
+    padding: 20px;
+    width: 33%;
+
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+#close {
+    color: #000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#close:hover,
+#close:focus {
+    color: #aaaaaa;
+
+    text-decoration: none;
+    cursor: pointer;
+}
